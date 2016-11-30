@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Main{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    
+    double a=sc.nextDouble();
+    double b=sc.nextDouble();
+    double g=b/(a*a)*10000;
+    double g2=(double)(Math.round(g))/10000;
+    
+    if(g2%1==0){
+      System.out.printf("%.4f\n",g2);
+    }
+    else{
+      System.out.printf("%g\n",g2);
+    }
+    
+    if(g2<18.5){
+      System.out.print("too thin");
+    }
+    else if(g2>18.5&&g2<24){
+      System.out.print("standard");
+    }
+    else{
+      System.out.print("too fat");
+    }
+  }
+}
