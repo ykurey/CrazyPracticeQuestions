@@ -17,7 +17,7 @@ class Main{
 class sort{
   public void b(int[] arr){
     int tmp=0;
-    for(int i=0;i<3;i++){ //種共3個數所以3輪
+    for(int i=0;i<3;i++){ //總共3個數所以3輪
       for(int j=0;j<2;j++){ //因n跟n+1比較，所以3-1輪
         if(arr[j]>arr[j+1]){  //相鄰比較
           tmp=arr[j+1];   //交換
