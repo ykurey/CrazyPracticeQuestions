@@ -1,32 +1,32 @@
 import java.util.*;
 class Main{
   public static void main(String args[]){
-		Scanner sc=new Scanner(System.in);
-		int[] arr=new int[3];
-		for(int i=0;i<3;i++){
-			arr[i]=sc.nextInt();
-		}
-		sort so=new sort();
-		so.b(arr);
-		for(int i=0;i<arr.length;i++){
-			System.out.print(arr[i]+" ");
-		}
-	}
+    Scanner sc=new Scanner(System.in);
+    int[] arr=new int[3];
+    for(int i=0;i<3;i++){
+      arr[i]=sc.nextInt();
+    }
+    sort so=new sort();
+    so.b(arr);
+    for(int i=0;i<arr.length;i++){
+      System.out.print(arr[i]+" ");
+    }
+  }
 }
 
 class sort{
-	public void b(int[] arr){
-		int tmp=0;
-		for(int i=0;i<3;i++){
-			for(int j=0;j<2;j++){
-				if(arr[j]>arr[j+1]){
-					tmp=arr[j+1];
-					arr[j+1]=arr[j];
-					arr[j]=tmp;
-				}
-			}
-		}
-	}
+  public void b(int[] arr){
+    int tmp=0;
+    for(int i=0;i<3;i++){
+      for(int j=0;j<2;j++){
+        if(arr[j]>arr[j+1]){
+          tmp=arr[j+1];
+          arr[j+1]=arr[j];
+          arr[j]=tmp;
+        }
+      }
+    }
+  }
 }
 
 /*
