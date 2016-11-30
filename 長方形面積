@@ -1,0 +1,11 @@
+import java.util.Scanner;
+class Main{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    
+    int a=sc.nextInt(); //輸入長	
+    int b=sc.nextInt(); //輸入寬
+    
+    System.out.print(a*b);
+    }
+}
