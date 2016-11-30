@@ -1,0 +1,24 @@
+import java.util.Scanner;
+  class Main{
+    public static void main(String args[]){
+      Scanner sc=new Scanner(System.in);
+      
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+      int c=sc.nextInt();
+      int d=1;
+      int i=0;
+      
+      do{
+        d=(d*a)%c;
+        i++;
+      }while(i<b);
+
+      System.out.print(d);
+    }
+  }
+  
+  /*
+  輸入三整數abc
+  輸出(a^b)%d
+  */
