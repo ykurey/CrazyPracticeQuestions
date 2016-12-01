@@ -13,7 +13,9 @@ class main{
       str[1]=Character.toUpperCase(str[1]);
       
       if(str[i]=='.'){
+      
         for(int j=1;j<10;j++){
+        
           if(str[i+j]==' '){
           
             count++;
@@ -37,23 +39,31 @@ import java.util.*;
 class main{
   public static void main(String args[]){
     Scanner sc=new Scanner(System.in);
-    char[] str=sc.nextLine().toCharArray();
+    
+    char[] str=sc.nextLine().toCharArray(); //輸入為字元陣列
     int count;
-    for(int i=0;i<str.length;i++){
-      count=0;
-      str[1]=Character.toUpperCase(str[1]);
-      if(str[i]=='.'){
-        for(int j=1;j<10;j++){
-          count++;
-          if(str[i+j]!=' '){
+    
+    for(int i=0;i<str.length;i++){  //字元陣列一個個檢查次數
+    
+      count=0;  
+      str[1]=Character.toUpperCase(str[1]);  //句首轉大寫，此題每句測資第0個都是"
+      
+      if(str[i]=='.'){  //判斷是否為句號
+      
+        for(int j=1;j<10;j++){  //往後檢查大約10個數
+        
+          count++;  //不管是不是空白先+1，不是空白57行跳出去後，立刻就是i+1轉換為大寫
+          
+          if(str[i+j]!=' '){  //檢查到不是立刻跳出53行迴圈
             break;
           }
+          
         }
-        str[i+count]=Character.toUpperCase(str[i+count]);
+       str[i+count]=Character.toUpperCase(str[i+count]);  //此時i還是句點值，遇句點後非空白count早已+1，句點後空白count最後一次計算之前都是計算空白數，最後一次為遇非空白
       }
      System.out.print(str[i]);
-    }		
-   }
+    }
+  }
 }
 
 
