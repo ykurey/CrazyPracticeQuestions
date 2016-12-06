@@ -1,0 +1,29 @@
+import java.util.*;
+public class main {
+  public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    
+    ArrayList con=new ArrayList();
+	    
+    while(true){
+      int data=sc.nextInt();
+      if(data==-1){
+        break;
+      }else{
+        con.add(data);  //add
+      }
+    }
+		
+    con.set(1,5);
+    con.remove(3);
+
+    Iterator iIterator=con.iterator();
+	
+    System.out.println("Arraylist toString : "+con);
+    System.out.print("Iterator : ");
+	
+    while(iIterator.hasNext()){
+      System.out.print(iIterator.next()+" ");
+    }
+  }
+}
