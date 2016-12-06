@@ -7,16 +7,16 @@ public class main {
 	    
     while(true){
       int data=sc.nextInt();
-      if(data==-1){
+      if(data==-1){   //輸入-1做為結束
         break;
       }else{
         con.add(data);  //add
       }
     }
 		
-    con.set(1,5);
-    con.remove(3);
-
+    con.set(1,5);   //修改第二筆資料為5
+    con.remove(3);  //移除index為3的資料
+    
     Iterator iIterator=con.iterator();
 	
     System.out.println("Arraylist toString : "+con);
