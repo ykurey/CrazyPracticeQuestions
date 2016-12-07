@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    
+    Queue <String> que=new LinkedList<String>();
+    String[] s=sc.nextLine().split(" ");  //一段式子裡面都有空格，所以用空格來切割
+    
+    int i=0;
+    while(i<s.length){
+      que.add(s[i]);  //把值添加到Queue裡面，利用add(數值)
+      i++;
+    }
+		
+    int b;
+    int result=Integer.parseInt(que.poll());  //先取出底一個數
+    
+    while(que.peek()!=null){  //查看是否為空
+      String c=que.poll();  //取出第二個東西 運算子
+      switch(c){
+        case "+":
+          b=Integer.parseInt(que.poll()); //轉換第三個東西，他本是字串轉為十進位數字
+          result+=b;  //做第一個跟第三個相加
+          break;
+        case "-":
+          b=Integer.parseInt(que.poll());
+          result-=b;
+          break;
+        case "*":
+          b=Integer.parseInt(que.poll());
+          result*=b;
+          break;
+        case "/":
+          b=Integer.parseInt(que.poll());
+          result/=b;
+          break;
+      }
+    }
+    System.out.println(result);
+    }
+}
