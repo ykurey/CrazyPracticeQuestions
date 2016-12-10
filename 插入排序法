@@ -13,13 +13,13 @@ public class Main{
     public static void InsertSort(int[] a) {
       int n,j;
       for(int i=1;i<a.length;i++){
-        n=a[i]; //先把後面那一個存到n
+        n=a[i]; //目前比較的最後一個數存到n
         j=i-1;  //j為前一個(i-1)
-        while(j>=0 && a[j]>n){  //假如前面那一個a[j]大於後面那一個n
+        while(j>=0 && a[j]>n){  //假如前面那一個a[j]大於，一開始最後一個數存 n為不變值，假如沒大於N，則a[j+1]
           a[j+1]=a[j];  //則前面那一個a[j]要取代後面那一個a[j+1]
           j--;  //j--往前兩兩比下去
         }
-        a[j+1]=n; //然後n值給a[j+1]作為剛剛被取代的數值，復原
+        a[j+1]=n;
       }
     }
     public static void print(int[] a) {
